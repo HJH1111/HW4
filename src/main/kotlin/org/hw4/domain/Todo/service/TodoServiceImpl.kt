@@ -34,7 +34,6 @@ class TodoServiceImpl (
             Todo(
                 title = request.title,
                 body = request.body,
-                date = request.date,
                 writerName = request.writerName,
             )
         ).toResponse()

@@ -2,6 +2,7 @@ package org.hw4.domain.Todo.model
 
 import jakarta.persistence.*
 import org.hw4.domain.Todo.dto.TodoResponse
+import java.time.LocalDateTime
 
 @Entity
 @Table(name = "todo")
@@ -13,7 +14,7 @@ class Todo (
     var body: String,
 
     @Column(name = "date")
-    var date: String,
+    val date: LocalDateTime = LocalDateTime.now(),
 
     @Column(name = "writername")
     var writerName: String,
