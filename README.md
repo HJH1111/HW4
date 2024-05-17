@@ -3,7 +3,7 @@
 
 ## 필수 구현 기능
 - [x]  할일카드 작성 기능
-    - `할 일 제목`, `할일 내용`, ~~작성일~~, `작성자 이름` 을 저장할 수 있습니다.
+    - `할 일 제목`, `할일 내용`, `작성일`, `작성자 이름` 을 저장할 수 있습니다.
     - 저장된 할 일의 정보를 반환 받아 확인할 수 있습니다.
 ```kotlin
  @Transactional
@@ -20,7 +20,7 @@ override fun createTodo(request: CreateTodoRequest): TodoResponse {
 ```
 - [x]  선택한 할 일 조회 기능
     - 선택한 할 일의 정보를 조회할 수 있습니다.
-    - 반환 받은 할 일 정보에는 `할 일 제목`,`할일 내용`, ~~작성일~~, `작성자 이름`정보가 들어있습니다.
+    - 반환 받은 할 일 정보에는 `할 일 제목`,`할일 내용`, `작성일`, `작성자 이름`정보가 들어있습니다.
 ```kotlin
     override fun getTodoByID(todoId: Long): TodoResponse {
         val todo = todoRepository.findByIdOrNull(todoId) ?: throw ModelNotFoundException("Todo", todoId)
@@ -61,7 +61,6 @@ override fun deleteTodo(todoId: Long) {
 } 
 ```
 
-## ~~작성일~~은 아직 미구현
 ### ERD usecase 추가예정
 ### step 1 까지 완성
 
